@@ -12,11 +12,21 @@
 #include "mbslave.h"
 #include "rs232.h"
 #include "LCD.h"
-
-
+#include "tankController.h"
 
 
 int main()
 {
+    InitRCC();
+    InitVTimers();
+    InitController();
+    InitLCD();
+    
+    while(1)
+    {
+        ControllerTask();
+        LCDTask();
+    }
+    
     return 0;
 }
