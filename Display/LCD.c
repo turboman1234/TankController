@@ -14,6 +14,8 @@ LiquidCristal.cpp
 
 
 extern RCC_ClocksTypeDef MYCLOCKS;
+extern ControllerSignals Signals;
+extern UniversalDPID PID;
 
 size_t LCDwrite(uint8_t);
 void LCDcommand(uint8_t);
@@ -108,7 +110,7 @@ void InitLCD(void)
     //Write text
     sprintf(Row1, "       Hello!       ");
     sprintf(Row2, "    I am TUS-16     ");
-    sprintf(Row3, "  tank  simulator!  ");
+    sprintf(Row3, "  tank controller!  ");
     sprintf(Row4, "       Enjoy!       ");
     
     strcpy(Buffer, Row1);
@@ -523,10 +525,19 @@ void LCDTask(void)
 {
     char Buffer[81]; // (4 * row lenght) + 1 (for '\0')
     
-//    sprintf(Row1, "Fl. level:%7f,cm", TankValues.currentFluidLevel * 100);
-//    sprintf(Row2, "Fout: %8f, m3/s", TankValues.outputFlow);
-//    sprintf(Row3, "Fin: %9f, m3/s", TankValues.currentControlVoltage * PUMP_COEF);
-//    sprintf(Row4, "Ctrl volt: %7f,V", TankValues.currentControlVoltage);
+    if(PID.workMode == eAutoMode)
+    {
+        sprintf(Row1, "Mode:           %4s", "Auto");
+        sprintf(Row4, "Setpoint: %6f, cm", Signals.currentSetpoint * 100);
+    }
+    else
+    {
+        sprintf(Row1, "Mode:         %6s", "Manual");
+        sprintf(Row4, "Pump voltage: %4f,V", Signals.manualControlVoltage);
+    }
+    
+    sprintf(Row2, "Fl. level: %6f,cm", Signals.currentFluidLevel*100);
+    sprintf(Row3, "Fout: %8f,cm3/s", Signals.outputFlowRate);
     
     LCDhome();
     
