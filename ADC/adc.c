@@ -76,7 +76,7 @@ void Init_ADC3(void)
     ADC_CommonInit(&ADC_CommonInitStructure);
      
     /* ADC1 Init ****************************************************************/
-    ADC_InitStructure.ADC_Resolution = ADC_Resolution_10b;
+    ADC_InitStructure.ADC_Resolution = ADC_Resolution_12b;
     ADC_InitStructure.ADC_ScanConvMode = DISABLE;
     ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;
     ADC_InitStructure.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None;
