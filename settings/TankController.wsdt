@@ -2,195 +2,60 @@
 
 <Workspace>
   <ConfigDictionary>
-    <CurrentConfigs>
-      <Project>TankController/Debug</Project>
-    </CurrentConfigs>
-  </ConfigDictionary>
+    
+  <CurrentConfigs><Project>TankController/Debug</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>231</Column0>
-          <Column1>27</Column1>
-          <Column2>27</Column2>
-          <Column3>27</Column3>
-        </ColumnWidths>
+          
+          
+          
+          
+        <Column0>231</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
-        <ColumnWidth0>20</ColumnWidth0>
-        <ColumnWidth1>1155</ColumnWidth1>
-        <ColumnWidth2>308</ColumnWidth2>
-        <ColumnWidth3>77</ColumnWidth3>
-      </Build>
-    </Static>
+        <PreferedWindows>
+          
+          
+          
+          
+        <Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1155</ColumnWidth1><ColumnWidth2>308</ColumnWidth2><ColumnWidth3>77</ColumnWidth3></Build>
+    <Find-in-Files><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>473</ColumnWidth0><ColumnWidth1>78</ColumnWidth1><ColumnWidth2>710</ColumnWidth2><ColumnWidth3>315</ColumnWidth3></Find-in-Files></Static>
     <Windows>
-      <Wnd1>
+      
+      
+    <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-5687-32382</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
-              <NodeDict>
-                <ExpandedNode>TankController</ExpandedNode>
-                <ExpandedNode>TankController/ADC</ExpandedNode>
-                <ExpandedNode>TankController/CMSIS</ExpandedNode>
-                <ExpandedNode>TankController/DAC</ExpandedNode>
-                <ExpandedNode>TankController/Definitions</ExpandedNode>
-                <ExpandedNode>TankController/Display</ExpandedNode>
-                <ExpandedNode>TankController/ModBusMaster</ExpandedNode>
-                <ExpandedNode>TankController/ModBusSlave</ExpandedNode>
-                <ExpandedNode>TankController/MyTimers</ExpandedNode>
-                <ExpandedNode>TankController/RCC</ExpandedNode>
-                <ExpandedNode>TankController/RS232</ExpandedNode>
-                <ExpandedNode>TankController/STDPeriph</ExpandedNode>
-                <ExpandedNode>TankController/Serial</ExpandedNode>
-                <ExpandedNode>TankController/TankController</ExpandedNode>
-                <ExpandedNode>TankController/USART</ExpandedNode>
-                <ExpandedNode>TankController/UserLibrary</ExpandedNode>
-                <ExpandedNode>TankController/VTimers</ExpandedNode>
-              </NodeDict>
-            </Session>
+              
+            <NodeDict><ExpandedNode>TankController</ExpandedNode><ExpandedNode>TankController/ADC</ExpandedNode><ExpandedNode>TankController/CMSIS</ExpandedNode><ExpandedNode>TankController/DAC</ExpandedNode><ExpandedNode>TankController/Definitions</ExpandedNode><ExpandedNode>TankController/Display</ExpandedNode><ExpandedNode>TankController/ModBusMaster</ExpandedNode><ExpandedNode>TankController/ModBusSlave</ExpandedNode><ExpandedNode>TankController/MyTimers</ExpandedNode><ExpandedNode>TankController/RCC</ExpandedNode><ExpandedNode>TankController/RS232</ExpandedNode><ExpandedNode>TankController/Serial</ExpandedNode><ExpandedNode>TankController/TankController</ExpandedNode><ExpandedNode>TankController/USART</ExpandedNode><ExpandedNode>TankController/UserLibrary</ExpandedNode><ExpandedNode>TankController/VTimers</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd1>
-      <Wnd0>
-        <Tabs>
-          <Tab>
-            <Identity>TabID-20493-3839</Identity>
-            <TabName>Build</TabName>
-            <Factory>Build</Factory>
-            <Session/>
-          </Tab>
-        </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd0>
-    </Windows>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1><Tabs><Tab><Identity>TabID-6203-29982</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd1></Windows>
     <Editor>
-      <Pane>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\main.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>366</SelStart2>
-          <SelEnd2>366</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\Controller\tankController.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>29</SelStart2>
-          <SelEnd2>29</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\Controller\tankController.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>82</SelStart2>
-          <SelEnd2>82</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\Display\LCD.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>239</SelStart2>
-          <SelEnd2>239</SelEnd2>
-        </Tab>
-        <ActiveTab>3</ActiveTab>
-      </Pane>
-      <ActivePane>0</ActivePane>
-      <Sizes>
-        <Pane>
-          <X>1000000</X>
-          <Y>1000000</Y>
-        </Pane>
-      </Sizes>
-      <SplitMode>1</SplitMode>
-    </Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\tankController.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>30</YPos2><SelStart2>3200</SelStart2><SelEnd2>3200</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\tankController.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>174</YPos2><SelStart2>0</SelStart2><SelEnd2>0</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Definitions\definitions.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>118</YPos2><SelStart2>5559</SelStart2><SelEnd2>5559</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Definitions\initPeripheral.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>45</YPos2><SelStart2>24083</SelStart2><SelEnd2>24083</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>515</SelStart2><SelEnd2>515</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
-      <Top>
-        <Row0>
-          <Sizes>
-            <Toolbar-00D26B00>
-              <key>iaridepm.enu1</key>
-            </Toolbar-00D26B00>
-          </Sizes>
-        </Row0>
-      </Top>
-      <Left>
-        <Row0>
-          <Sizes>
-            <Wnd1>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>575</Bottom>
-                <Right>322</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>200</xscreen>
-                <yscreen>200</yscreen>
-                <sizeHorzCX>125000</sizeHorzCX>
-                <sizeHorzCY>244499</sizeHorzCY>
-                <sizeVertCX>202500</sizeVertCX>
-                <sizeVertCY>705379</sizeVertCY>
-              </Rect>
-            </Wnd1>
-          </Sizes>
-        </Row0>
-      </Left>
-      <Right>
-        <Row0>
-          <Sizes/>
-        </Row0>
-      </Right>
-      <Bottom>
-        <Row0>
-          <Sizes>
-            <Wnd0>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>198</Bottom>
-                <Right>1602</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>1604</xscreen>
-                <yscreen>200</yscreen>
-                <sizeHorzCX>1002500</sizeHorzCX>
-                <sizeHorzCY>244499</sizeHorzCY>
-                <sizeVertCX>125000</sizeVertCX>
-                <sizeVertCY>244499</sizeVertCY>
-              </Rect>
-            </Wnd0>
-          </Sizes>
-        </Row0>
-      </Bottom>
-      <Float>
-        <Sizes/>
-      </Float>
-    </Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00D96B00><key>iaridepm.enu1</key></Toolbar-00D96B00></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>286</Top><Left>-2</Left><Bottom>575</Bottom><Right>322</Right><x>-2</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>125000</sizeHorzCX><sizeHorzCY>244499</sizeHorzCY><sizeVertCX>202500</sizeVertCX><sizeVertCY>705379</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>198</Bottom><Right>1602</Right><x>-2</x><y>-2</y><xscreen>1604</xscreen><yscreen>200</yscreen><sizeHorzCX>1002500</sizeHorzCX><sizeHorzCY>244499</sizeHorzCY><sizeVertCX>125000</sizeVertCX><sizeVertCY>244499</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 
