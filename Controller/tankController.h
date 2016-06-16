@@ -36,13 +36,14 @@
 
 // controller's constants
 #define MIN_DAC_VALUE                                   95
-#define MAX_DAC_VALUE                                   4095
+#define MAX_DAC_VALUE                                   4055
 #define MIN_ADC_VALUE                                   95
-#define ADC_CODE_TO_FLUID_LEVEL_CONSTANT                (H_MAX + 0.0001) / 4000.0                               // (H_MAX + 0.0001) ----> max fluid level transmited by DAC
-#define ADC_CODE_TO_OUTPUT_FLOW_CONSTANT                (F_OUT_MAX * 1.0005) / 4000.0                           // (F_OUT_MAX * 1.0005) ----> ~max output flow rate transmited by DAC
-#define ADC_CODE_TO_SETPOINT_CONSTANT                   H_MAX / 4000.0                                          // trimmer resolution is 12 bits, the first 95 values of which will be ignored
-#define ADC_CODE_TO_MANUAL_CONTROL_VOLTAGE              U_MAX / 4000.0
-#define VOLTAGE_TO_DAC_CODE_CONSTANT                    4000.0 / U_MAX                                          // 
+#define MAX_ADC_VALUE                                   4055
+#define ADC_CODE_TO_FLUID_LEVEL_CONSTANT                (H_MAX + 0.0001) / (MAX_ADC_VALUE - MIN_ADC_VALUE)                               // (H_MAX + 0.0001) ----> max fluid level transmited by DAC
+#define ADC_CODE_TO_OUTPUT_FLOW_CONSTANT                (F_OUT_MAX * 1.0005) / (MAX_ADC_VALUE - MIN_ADC_VALUE)                           // (F_OUT_MAX * 1.0005) ----> ~max output flow rate transmited by DAC
+#define ADC_CODE_TO_SETPOINT_CONSTANT                   H_MAX / (MAX_ADC_VALUE - MIN_ADC_VALUE)                                          // trimmer resolution is 12 bits, the first 95 values of which will be ignored
+#define ADC_CODE_TO_MANUAL_CONTROL_VOLTAGE              U_MAX / (MAX_ADC_VALUE - MIN_ADC_VALUE)
+#define VOLTAGE_TO_DAC_CODE_CONSTANT                    (float)(MAX_DAC_VALUE - MIN_DAC_VALUE) / U_MAX                                          // 
 #define SAMPLE_TIME                                     T_100_MS
 
 typedef enum{
