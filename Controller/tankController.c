@@ -43,6 +43,7 @@ void InitController(void)
     InitADC(FLUID_LEVEL_INPUT);
     InitADC(OUTPUT_FLOW_INPUT);
     InitTrimmer(FLUID_LEVEL_SETPOINT_INPUT);
+    InitTrimmer(MANUAL_CONTROL_VOLTAGE_INPUT);
     InitDAC(PUMP_CONTROL_VOLTAGE_OUTPUT, 0);
     
     // Init DIs
