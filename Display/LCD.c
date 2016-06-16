@@ -528,16 +528,16 @@ void LCDTask(void)
     if(PID.workMode == eAutoMode)
     {
         sprintf(Row1, "Mode:           %4s", "Auto");
-        sprintf(Row4, "Setpoint: %6f, cm", Signals.currentSetpoint * 100);
+        sprintf(Row4, "Setpoint:   %2.2f, cm", Signals.currentSetpoint * 100);
     }
     else
     {
         sprintf(Row1, "Mode:         %6s", "Manual");
-        sprintf(Row4, "Pump voltage: %4f,V", Signals.manualControlVoltage);
+        sprintf(Row4, "Pump voltage: %1.2f,V", Signals.manualControlVoltage);
     }
     
-    sprintf(Row2, "Fl. level: %6f,cm", Signals.currentFluidLevel*100);
-    sprintf(Row3, "Fout: %8f,cm3/s", Signals.outputFlowRate);
+    sprintf(Row2, "Flow level: %2.2f, cm", Signals.currentFluidLevel*100);
+    sprintf(Row3, "Fout:    %2.2f, cm3/s", Signals.outputFlowRate);
     
     LCDhome();
     
