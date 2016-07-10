@@ -211,3 +211,42 @@ void TIM4_IRQHandler(void)
     TIM_ClearFlag(TIM4, TIM_FLAG_Update);
     TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
 }
+
+//TIM_5 is used for tank simulator with T0 = 1, ms
+// int sampleTime, ms - T_1_MS, T_10_MS, T_100_MS, T_500_MS, T_1_S
+void InitTIM5(int sampleTime)
+{
+    TIM_TimeBaseInitTypeDef TIM_5_TimeBaseInitStruct;
+    NVIC_InitTypeDef MYNVIC;
+    
+    //AHB clock = 50, MHz
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM5, ENABLE);
+    
+    // Configure TIM2 IRQ
+    MYNVIC.NVIC_IRQChannel = TIM5_IRQn;
+    MYNVIC.NVIC_IRQChannelCmd = ENABLE;
+    MYNVIC.NVIC_IRQChannelPreemptionPriority = 0;
+    MYNVIC.NVIC_IRQChannelSubPriority = 0;
+    NVIC_Init(&MYNVIC);
+   
+    TIM_DeInit(TIM5);
+    
+    //TIM_5 clock = 50, MHz / prescaler = 50 000 000 / 50 000 = 1 000, Hz
+    //time = TIM_5 period * (1 / TIM_5 clock) = sampleTime * (1 / 1 000) = 0.001, s
+       
+    TIM_5_TimeBaseInitStruct.TIM_Prescaler = 50000;
+    TIM_5_TimeBaseInitStruct.TIM_Period = sampleTime;
+    TIM_5_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1; // 0
+    TIM_5_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;
+    TIM_5_TimeBaseInitStruct.TIM_RepetitionCounter = 0;
+    
+    TIM_TimeBaseInit(TIM5, &TIM_5_TimeBaseInitStruct);
+    
+    TIM_ClearFlag(TIM5, TIM_FLAG_Update);
+    TIM_ClearITPendingBit(TIM5, TIM_IT_Update);
+    
+    TIM_ITConfig(TIM5, TIM_IT_Update, ENABLE);
+    
+    // This timer will be enabled when all controller's initialization tasks complete
+}
+
