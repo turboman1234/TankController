@@ -19,13 +19,13 @@ int main()
 {
     InitRCC();
     InitVTimers();
-    InitController();
+    InitControllerPeripheral();
+    SetInitialConditions();
     InitLCD();
     
     while(1)
     {
-        ControllerTask();
-        LCDTask();
+        ControllerDisplayDataTask();
     }
     
     return 0;
