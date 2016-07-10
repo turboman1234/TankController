@@ -14,14 +14,10 @@ LiquidCristal.cpp
 
 
 extern RCC_ClocksTypeDef MYCLOCKS;
-extern ControllerSignals Signals;
-extern UniversalDPID PID;
 
 size_t LCDwrite(uint8_t);
 void LCDcommand(uint8_t);
 
-//Row arrays for more friendly writting
-char Row1[ROW_LENGHT], Row2[ROW_LENGHT], Row3[ROW_LENGHT], Row4[ROW_LENGHT];
 
 /*
 STM32F4_DISCOVERY_LOW_LEVEL Exported_Types
@@ -101,6 +97,9 @@ init(1, rs, rw, enable, d0, d1, d2, d3, 0, 0, 0, 0);
 void InitLCD(void)
 {
     char Buffer [81];
+    
+    //Row arrays for more friendly writting
+    char Row1[ROW_LENGHT], Row2[ROW_LENGHT], Row3[ROW_LENGHT], Row4[ROW_LENGHT];
     
     LCDSet(RS,Enb,B0,B1,B2,B3);
     LCDnoDisplay();
@@ -518,37 +517,6 @@ uint16_t LCDStrWrite(const uint8_t *buffer, uint16_t size)
     return n;
 }
 
-
-
-
-void LCDTask(void)
-{
-    char Buffer[81]; // (4 * row lenght) + 1 (for '\0')
-    
-    if(PID.workMode == eAutoMode)
-    {
-        sprintf(Row1, "Mode:           %4s", "Auto");
-        sprintf(Row4, "Setpoint:   %2.2f, cm", Signals.currentSetpoint * 100);
-    }
-    else
-    {
-        sprintf(Row1, "Mode:         %6s", "Manual");
-        sprintf(Row4, "Pump voltage: %1.2f,V", Signals.manualControlVoltage);
-    }
-    
-    sprintf(Row2, "Flow level: %2.2f, cm", Signals.currentFluidLevel*100);
-    sprintf(Row3, "Fout:    %2.2f, cm3/s", Signals.outputFlowRate);
-    
-    LCDhome();
-    
-    strcpy(Buffer, Row1);
-    strcat(Buffer, Row3);
-    strcat(Buffer, Row2);
-    strcat(Buffer, Row4);
-    Buffer[80] = '\0';
-    
-    LCDprint(Buffer);
-}
 
 uint16_t LCDprint(char* s)
 {

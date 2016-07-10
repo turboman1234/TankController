@@ -100,7 +100,6 @@ void LCDpulseEnable();
 
 uint16_t LCDprint(char* s);
 uint16_t LCDStrWrite(const uint8_t *buffer, uint16_t size);
-void LCDTask(void);
 
 
 void pinMode(LCD_TypeDef pin, uint8_t mode);
